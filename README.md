@@ -1,5 +1,7 @@
 # 🎂 Birthday Surprise
 
+🌐 **Live demo:** https://skfiroz-git.github.io/birthday-surprise/
+
 A one-page interactive birthday website: 8 little screens with balloons to pop, candles to blow out, flowers to tap, a self-typing letter and a final card.
 
 No frameworks, no build step, no server needed.
@@ -95,17 +97,37 @@ var LETTER_TEXT = "...";                                    // the long letter (
 
 ## 🚀 Put it on GitHub
 
+**1 · Create the repository** — go to https://github.com/new, name it (e.g. `birthday-surprise`),
+choose **Public**, and leave **every checkbox unticked** (this folder already has a README).
+
+**2 · Upload the files** (run inside this folder):
+
 ```bash
-git init
+git init -b main
 git add .
-git commit -m "Birthday surprise site"
-git branch -M main
+git commit -m "feat: birthday surprise website"
 git remote add origin https://github.com/USERNAME/REPO.git
 git push -u origin main
 ```
 
-Then on your repo page: **Settings → Pages → Source: `main` / root → Save**.
-Your site will be live at `https://USERNAME.github.io/REPO/` in a minute or two.
+> When git asks for a **password**, use a *Personal Access Token*, not your account password:
+> https://github.com/settings/tokens → **Generate new token (classic)** → tick **`repo`** → copy it.
+
+**3 · Turn on GitHub Pages** — repo **Settings → Pages → Source**, then **Save**:
+
+* **GitHub Actions** — click **Enable** if GitHub asks to allow workflows (this is what this repo uses), or
+* **Deploy from a branch** → branch `main`, folder `/ (root)`.
+
+Either way the site goes live in a minute or two at
+`https://USERNAME.github.io/REPO/`, and every push after that redeploys it automatically.
+
+**4 · Editing later** — GitHub may add `.github/workflows/` to your repo, so always pull first:
+
+```bash
+git pull --rebase origin main
+# …edit config.js…
+git add . && git commit -m "docs: update greeting" && git push
+```
 
 ---
 
