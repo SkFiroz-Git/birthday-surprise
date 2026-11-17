@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Happy Birthday, Nargis! ❤️</title>
+  <meta name="description" content="A special birthday surprise made with all my best wishes, just for Nargis." />
+  <meta name="author" content="HeartCraft" />
+  <meta property="og:title" content="Happy Birthday, Nargis! ❤️" />
+  <meta property="og:description" content="A special birthday surprise made with all my best wishes, just for Nargis." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#fff5f7" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E❤️%3C/text%3E%3C/svg%3E" />
+
+  <!-- STYLES -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HTML STRUCTURE -->
+  <div id="app">
+    <!-- floating background hearts / petals / sparkles -->
+    <div class="bg-hearts" id="bgHearts" aria-hidden="true"></div>
+
+    <!-- the 8 screens of the experience are rendered here -->
+    <main class="stage" id="stage"></main>
+
+    <!-- confetti + celebration burst layers -->
+    <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+    <div class="burst-layer" id="burstLayer" aria-hidden="true"></div>
+
+    <!-- MUSIC -->
+    <div id="musicRoot">
+      <div class="music-tip" id="musicTip" role="status">
+        <span class="tip-emoji" aria-hidden="true">🎵</span>
+        <span class="tip-text">Turn on for better experience</span>
+        <button class="tip-play" id="musicTipPlay" type="button">Play</button>
+      </div>
+      <button class="music-btn" id="musicBtn" type="button" aria-label="Play background music" aria-pressed="false">
+        <svg class="m-icon m-icon-muted" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <line x1="23" y1="9" x2="17" y2="15"></line>
+          <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+        <svg class="m-icon m-icon-on" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+        </svg>
+      </button>
+    </div>
+
+    <!-- CORNER QUICK-ACTION WIDGET -->
+    <div class="brand" id="brand">
+      <div class="brand-panel" id="brandPanel" hidden>
+        <div class="brand-head">
+          <span class="brand-logo" aria-hidden="true">🎂</span>
+          <span class="brand-title">Nargis' <em>Birthday</em></span>
+        </div>
+        <div class="brand-actions">
+          <button class="brand-item" id="brandReplay" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path>
+            </svg>
+            <span>Replay from the start</span>
+          </button>
+          <button class="brand-item is-pink" id="brandMusic" type="button">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle>
+            </svg>
+            <span id="brandMusicLabel">Play the music</span>
+          </button>
+        </div>
+      </div>
+      <button class="brand-btn" id="brandBtn" type="button" aria-expanded="false" aria-controls="brandPanel" aria-label="Open quick actions">
+        <span class="brand-glyph" aria-hidden="true">💌</span>
+      </button>
+    </div>
+  </div>
+
+
+  <!-- CONFIG (your edits) + APP -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
